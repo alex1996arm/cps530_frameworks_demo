@@ -8,3 +8,6 @@ def home(request):
 
 def credit(request):
     return HttpResponse(render(request, 'credits.html'))
+
+def result(request):
+    return HttpResponse(render(request, 'result.html'))
