@@ -25,5 +25,6 @@ urlpatterns = [
     path('summary/', views.summary),
     path('install/', views.install),
     path('sitetuto/', views.sitetuto),
+    path('conclusion/', views.conclusion),
 
 ]

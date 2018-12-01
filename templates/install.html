@@ -1,8 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
     <h3>Installation of our project</h3>
-<p class="flow-text">Since we were using github to track our development changes, the easiest way to host our application would be using Heroku</p>
+<p class="flow-text">Since we were using github to track our development changes, the easiest way to host our application would be using Heroku. You can also host your application on heroku by uploading local files, which is what we're doing in this tutorial</p>
 first, you must enter your root directory and create a requirements.txt file
     <blockquote>pip freeze > requirements</blockquote>
-    Then, you must create a
+    Then, you must create a Procfile in your root folder
+    <blockquote>echo "web: gunicorn myproject.wsgi" > Procfile</blockquote>
+    You must install django-heroku
+    <blockquote>pip install django-heroku</blockquote>
+    Then you must add import django to the top of your file
+    <blockquote>sed -i '1s/^ import django_heroku / settings.py'  </blockquote>
+    Then you must this to the bottom of your settings.py file
+    <blockquote> # Activate Django-Heroku.
+django_heroku.settings(locals()) </blockquote>
+
+    <h4>to create a new instance</h4>
+    You must have a heroku account. In a linux terminal.
+    <blockquote>sudo snap install heroku --classic</blockquote>
+    <blockquote>heroku login</blockquote>
+    <blockquote>heroku create</blockquote>
+    <blockquote>git push heroku master</blockquote>
+   <blockquote>heroku ps:scale web=1</blockquote>
+    <blockquote>heroku open</blockquote>
+    <h4>and you're done! wasn't that easy?</h4>
+
 {% endblock %}

@@ -25,3 +25,7 @@ def install(request):
 def sitetuto(request):
     return HttpResponse(render(request, 'sitetuto.html'))
 
+
+def conclusion(request):
+    return HttpResponse(render(request, 'conclusion.html'))
+
