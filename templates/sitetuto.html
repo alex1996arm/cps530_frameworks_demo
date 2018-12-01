@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>How to create a great looking page with Materialize and Django</h3>
+    <p class="flow-text">Materialize and django are a great combo, allowing you to create responsive, beautiful web applications with very little effort. Materialize is the front-end framework, whose skeleton consists of HTML, CSS and Javascript. Django is a backend framework that uses python. This tutorial will be divided into two parts, front end and back-end </p>
+    <h4>Front-end</h4>
+    <p class="flow-text">To create front-end skeleton code, you must first create an html file, so within the linux command line issue this command:</p>
+ <blockquote>
+      touch demo.html<br/>
+    </blockquote>
+    <p class="flow-text">Then you must open that demo.html file in the text editor of your choice and add the following elements</p>    <blockquote></blockquote>
+    <blockquote>
+
+&lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;!--Import Google Icon Font--&gt;
+      &lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot; rel=&quot;stylesheet&quot;&gt;
+     &lt;!-- Compiled and minified CSS --&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css&quot;&gt;
+&lt;script
+  src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot;
+  integrity=&quot;sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=&quot;
+  crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Compiled and minified JavaScript --&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js&quot;&gt;&lt;/script&gt;
+
+      &lt;!--Let browser know website is optimized for mobile--&gt;
+      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+       &lt;!-- Compiled and minified CSS --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css&quot;&gt;
+
+    &lt;!-- Compiled and minified JavaScript --&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+</blockquote>
+
+In the body section you should add this code
+    <blockquote>
+
+&lt;div class=&quot;container&quot;&gt;
+  &lt;script&gt;
+       $(document).ready(function(){
+    $('input.autocomplete').autocomplete({
+      data: {
+        &quot;Creating my first web page&quot;: null,
+        &quot;Using front end frameworks&quot;: null,
+        &quot;Using back end frameworks&quot;: null,
+      },
+    });
+  });
+
+         $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+
+  &lt;/script&gt;
+&lt;p class=&quot;flow-text&quot;&gt;&quot;Carousel&quot;, a versatile component that allows images to be interactive. Drag the images!&lt;/p&gt;
+        &lt;div class=&quot;carousel&quot;&gt;
+    &lt;a class=&quot;carousel-item&quot; href=&quot;#one!&quot;&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2000/1*nC94XZXcbKJQVF1vhj30nQ.png&quot;&gt;&lt;/a&gt;
+    &lt;a class=&quot;carousel-item&quot; href=&quot;#two!&quot;&gt;&lt;img src=&quot;https://pbs.twimg.com/profile_images/532662364613525504/GN559Lfb_400x400.png&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;carousel-item&quot; href=&quot;#two!&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png&quot;&gt;&lt;/a&gt;
+  &lt;/div&gt;
+
+
+        &lt;br/&gt;
+        &lt;p class=&quot;flow-text&quot;&gt;The materialize framework allows you to build mobile-first websites that have responsive text and impressive visuals&lt;/p&gt;
+&lt;br&gt;
+    &lt;h4&gt;What do you need help with today?&lt;/h4&gt;
+      &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col s12&quot;&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;input-field col s12&quot;&gt;
+          &lt;i class=&quot;material-icons prefix&quot;&gt;textsms&lt;/i&gt;
+          &lt;input type=&quot;text&quot; id=&quot;autocomplete-input&quot; class=&quot;autocomplete&quot;&gt;
+          &lt;label for=&quot;autocomplete-input&quot;&gt;Enter your query&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+ &lt;div class=&quot;row&quot;&gt;
+    &lt;form class=&quot;col s12&quot;&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;input-field col s6&quot;&gt;
+          &lt;input placeholder=&quot;First Name&quot; id=&quot;first_name&quot; type=&quot;text&quot; class=&quot;validate&quot;&gt;
+          &lt;label for=&quot;first_name&quot;&gt;First Name&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;input-field col s6&quot;&gt;
+          &lt;input placeholder=&quot;Last Name&quot; id=&quot;last_name&quot; type=&quot;text&quot; class=&quot;validate&quot;&gt;
+          &lt;label for=&quot;last_name&quot;&gt;Last Name&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;input-field col s12&quot;&gt;
+          &lt;input placeholder=&quot;Email&quot; id=&quot;email&quot; type=&quot;email&quot; class=&quot;validate&quot;&gt;
+          &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+        &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;input-field col s12&quot;&gt;
+          &lt;a class=&quot;waves-effect waves-light btn&quot; onclick=&quot;window.location.replace('http://www.google.com/search?q='+document.getElementById('autocomplete-input').value)&quot;&gt;Help me!&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+
+
+    &lt;/div&gt;
+
+    </blockquote>
+<h3>Back-End</h3>
+    <p class="flow-text">Backend will be a little bit more involved, first of all, you must make sure python and django are installed. Once that is done, the first step is to type: </p>
+<blockquote>django-admin startproject mysite</blockquote>
+    <p class="flow-text">Then, you're going to want to add url routes, views and templates. In the urls.py you must add</p>
+    <blockquote> path('sitetuto/', views.sitetuto),</blockquote>
+    <p class="flow-text"> then you must create a folder called templates in the root folder of the project and add you front-end code to a template you will call sitetuto.html, finally you must create a views.py file in the root directory and add the following to views.py</p>
+    <blockquote>from django.http import HttpResponse<br/>
+from django.shortcuts import render<br/><br/>
+    on the top and lower down:<br/>
+<br/>
+    def sitetuto(request):<br/>
+    return HttpResponse(render(request, 'sitetuto.html'))
+    </blockquote>
+{% endblock %}

@@ -23,5 +23,7 @@ urlpatterns = [
     path('credit/', views.credit),
     path('result/', views.result),
     path('summary/', views.summary),
-    path('install/', views.summary),
+    path('install/', views.install),
+    path('sitetuto/', views.sitetuto),
+
 ]
