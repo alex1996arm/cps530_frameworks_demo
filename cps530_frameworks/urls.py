@@ -22,4 +22,6 @@ urlpatterns = [
     path('', views.home),
     path('credit/', views.credit),
     path('result/', views.result),
+    path('summary/', views.summary),
+    path('install/', views.summary),
 ]

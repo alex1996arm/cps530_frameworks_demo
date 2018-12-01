@@ -9,5 +9,14 @@ def home(request):
 def credit(request):
     return HttpResponse(render(request, 'credits.html'))
 
+
 def result(request):
     return HttpResponse(render(request, 'result.html'))
+
+
+def summary(request):
+    return HttpResponse(render(request, 'summary.html'))
+
+
+def install(request):
+    return HttpResponse(render(request, 'install.html'))
