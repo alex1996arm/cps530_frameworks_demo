@@ -1,0 +1,1 @@
+web: gunicorn cps530_frameworks.wsgi
